@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<title>6.831 Sudokui</title>
+<meta name="viewport" content="width=device-width,user-scalable=no">
+<link rel="stylesheet" href="layout.css">
+<script src="lib/jquery-3.1.1.js"></script>
+<script src="lib/seedrandom.js"></script>
+<script src="algorithm.js"></script>
+<script src="hintmaker.js"></script>
+<script src="interface.js"></script>
+<!-- Remove this script to disable logging -->
+<script src="logging.js"></script>
+</head>
+<body>
+
+   
+<table style="width:100%;min-height:80%;"><tr><td align="center">
+<center><h1>6.831 Sudokui</h1>
+<p style="margin-top:0">Your task: solve puzzles #1-#5 or more.</p>
+</center>
+<center style="display:table-cell;vertical-align:middle;">
+<div class="puzzlename" id="grade">&nbsp;</div>
+<table class="timescore"><tr>
+<td style="text-align:center">
+<span class="progress">Time</span>
+<span class="finished">Finished in</span> <span class="timer">0</span></td>
+</table>
+<table><tr>
+<td style="text-align:center" id="leftlayout">
+</td>
+<td>
+<center id="centerlayout">
+<input type="button" value="Clear" id="clearbutton"
+button accesskey="a" title="Press 'a' to reset "
+><input type="button" value="Check" id="checkbutton"
+   title="Press 's' to check" 
+><input type="button" value="&laquo; Prev" id="prevbutton"
+   title="Press 'd' to previous"
+><input type="button" value="Next &raquo;" id="nextbutton"
+   title="Press 'f' to Next"
+>
+<p id="bottomtext"></p>
+</center>
+</td>
+<td id="rightlayout">
+</td>
+</tr>
+</table>
+<div class="sudoku-popup" id="victory">You Win!</div>
+<div class="sudoku-popup" id="ok">ok so far</div>
+<div class="sudoku-popup" id="errors" >Mistake</div>
+<div class="sudoku-popup" id="intro">
+<p>In this experiment, you will solve mini Sudoku puzzles.</p>
+<p>The rules of Sudoku are to fill in all the digits so that no duplicates
+   appear in any row, column or bold-bordered square.</p>
+<p>This version of the interface uses keyboardevents and mouseevents.</p>
+<p>To insert a number use the number keys and use arrow keys to move through the cells</p>
+<p>Shortcuts are visible to the user when they hover mouse over the buttons on the bottom. </p>
+<p>Shortcuts used are 'a' for clear,'s' for check,'d' for previous, 'f' for next and
+   use Backspace key to erase a number in the cell.</p>
+<p>Practice on puzzle #1 and #2. Then starting with puzzle #3,
+solve as many puzzles as quickly and correctly as you can.</p>
+<p>Click anywhere on the screen to close this popup.</p>
+</div>
+</td></tr>
+</table>
+</body>
+</html>
